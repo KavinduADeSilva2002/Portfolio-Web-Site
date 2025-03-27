@@ -539,6 +539,26 @@ span {
     .home-content h3 {
         font-size: 2.8rem;
     }
+
+    .home {
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 70vw; /* Increase image size */
+        max-width: 300px; /* Add maximum width */
+    }
+
+    .menu-btn i {
+        font-size: 2.6rem;
+        color: white;
+    }
+
+    .menu-btn.fa-times {
+        display: none; /* Remove the times icon */
+    }
 }
 
 @media (max-width: 600px) {

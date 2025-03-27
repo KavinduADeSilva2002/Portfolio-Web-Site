@@ -49,13 +49,15 @@ header {
     transform: scale(1.1);
 }
 
+/* Update the nav a styles */
 nav a {
     font-size: 1.8rem;
     color: white;
     margin-left: 4rem;
     font-weight: 500;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
     border-bottom: 3px solid transparent;
+    padding-bottom: 0.5rem;
 }
 
 nav a:hover,

@@ -101,7 +101,7 @@
             <div class="footer-info">
                 <p><i class="fas fa-map-marker-alt"></i> Location: Ambalangoda, Galle, Sri Lanka</p>
                 <p><i class="fas fa-phone"></i> Phone: +94 70 272 1268</p>
-                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:kavinduanjana35@gmail.com">kavindu.20230013@iit.ac.lk</a></p>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:kavinduanjana35@gmail.com">kavinduanjana35@gmail.com</a></p>
             </div>
             <div class="footer-social">
                 <a href="https://www.linkedin.com/in/kavindu-anjana-02477a253/"><i class="fab fa-linkedin"></i></a>
@@ -111,6 +111,30 @@
             <p class="footer-copy">© 2025 Kavindu Anjana | All Rights Reserved</p>
         </div>
     </footer>
+    <script>
+        // Get all sections
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 

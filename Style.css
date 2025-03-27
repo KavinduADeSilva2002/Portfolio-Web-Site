@@ -208,35 +208,108 @@ span {
 }
 
 .typing-text span::before {
-    content: " Software Developer";
+    content: "";
     color: #b74b4b;
-    animation: words 20s infinite;
+    animation: typing 20s steps(1) infinite;
 }
 
 /* Update cursor animation styles */
 .typing-text span::after {
     content: "";
-    background-color: black;
     position: absolute;
+    right: -4px;
     width: 2px;
     height: 100%;
     border-left: 2px solid #b74b4b;
     animation: cursor 0.6s infinite;
-    right: -4px;
 }
 
 @keyframes cursor {
-    to {
-        border-left: 3px solid #b74b4b;
-    }
+    50% { border-color: transparent; }
 }
 
-@keyframes words {
-    0%,20%{ content: " Full Stack Developer"; }
-    21%,40%{ content: " Web Developer"; }
-    41%,60%{ content: " Web Designer"; }
-    61%,80%{ content: " UI/UX Designer"; }
-    81%,100%{ content: " Mobile App Developer"; }
+@keyframes typing {
+    /* Full Stack Developer */
+     0% { content: ""; }
+    2% { content: "F"; }
+    4% { content: "Fu"; }
+    6% { content: "Full"; }
+    8% { content: "Full S"; }
+    10% { content: "Full Sta"; }
+    12% { content: "Full Stack "; }
+    14% { content: "Full Stack Dev"; }
+    16% { content: "Full Stack Develo"; }
+    18%,20% { content: "Full Stack Developer"; }
+    22% { content: "Full Stack Develop "; }
+    24% { content: "Full Stack Dev"; }
+    26% { content: "Full Stack"; }
+    28% { content: "Full St"; }
+    30%{ content: "Full"; }
+    32% { content: "Fu"; }
+    34% { content: ""; }
+    
+    36% { content: "We"; }
+    37% { content: "Web "; }
+    38% { content: "Web De"; }
+    39% { content: "Web Deve"; }
+    40% { content: "Web Develo"; }
+    41%,43% { content: "Web Developer"; }
+    44% { content: "Web Develope"; }
+    45% { content: "Web Develo"; }
+    46% { content: "Web Deve"; }
+    47% { content: "Web D"; }
+    48% { content: "Web"; }
+    49% { content: "We"; }
+    50% { content: ""; }
+
+    
+    51% { content: "W"; }
+    52% { content: "We"; }
+    53% { content: "Web"; }
+    54% { content: "Web "; }
+    55% { content: "Web D"; }
+    56% { content: "Web De"; }
+    57% { content: "Web Des"; }
+    58% { content: "Web Desig"; }
+    59% { content: "Web Design"; }
+    60%, 62% { content: "Web Designer"; }
+    63% { content: "Web Designe"; }
+    64% { content: "Web Design"; }
+    65% { content: "Web Desig"; }
+    66% { content: "Web Des"; }
+    67% { content: "Web De"; }
+    68% { content: "Web D"; }
+    69% { content: "Web"; }
+    70% { content: "We"; }
+    71% { content: ""; }
+    
+    72% { content: "M"; }
+    73% { content: "Mo"; }
+    74% { content: "Mobile"; }
+    75% { content: "Mobile A"; }
+    76% { content: "Mobile App "; }
+    77% { content: "Mobile App D"; }
+    78% { content: "Mobile App Dev"; }
+    79% { content: "Mobile App Develo"; }
+    80%, 82% { content: "Mobile App Developer"; }
+    83% { content: "Mobile App Develo"; }
+    84% { content: "Mobile App De"; }
+    85% { content: "Mobile App"; }
+    86% { content: "Mobile A"; }
+    87% { content: "Mobile"; }
+    88% { content: "Mob"; }
+    89% { content: "M"; }
+    90% { content: ""; }
+    
+    91% { content: "U"; }
+    92% { content: "UI"; }
+    93% { content: "UI/"; }
+    94% { content: "UI/U"; }
+    95% { content: "UI/UX"; }
+    96% { content: "UI/UX "; }
+    97% { content: "UI/UX D"; }
+    98% { content: "UI/UX De"; }
+    99%, 100% { content: "UI/UX Designer"; }
 }
 
 /* Skills Section Styles */
@@ -465,6 +538,27 @@ span {
         margin-right: 1rem;
         font-size: 1.7rem;
     }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin: 2rem auto 3rem;
+        width: 100%;
+    }
+
+    .social-icons a {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 @media (max-width: 600px) {
@@ -477,6 +571,16 @@ span {
         margin: 1rem 0;
         text-align: center;
         width: 100%;
+    }
+
+    .social-icons {
+        gap: 1.5rem;
+    }
+
+    .social-icons a {
+        width: 4rem;
+        height: 4rem;
+        font-size: 2rem;
     }
 }
 

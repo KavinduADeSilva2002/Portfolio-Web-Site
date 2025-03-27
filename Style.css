@@ -24,13 +24,14 @@ body {
 
 /* Header Styles (Kept the same as your original) */
 header {
-    margin-top: 20px;
+    margin-top: 0px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 1rem 9%;
-    background-color: transparent;
+    /*background-color: transparent;*/
+    background-color: 	#353839;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +40,7 @@ header {
 
 .logo {
     font-size: 3rem;
-    color: #b74b4b;
+    color: #ffffff;
     font-weight: 800;
     cursor: pointer;
     transition: 0.5s ease;

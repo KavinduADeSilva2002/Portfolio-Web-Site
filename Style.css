@@ -29,8 +29,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 9%;
-    /*background-color: transparent;*/
+    padding: 2rem 9%;
     background-color: 	#353839;
     display: flex;
     justify-content: space-between;
@@ -197,6 +196,7 @@ span {
     box-shadow: 0 0 25px #b74b4b;
 }
 
+/* Update typing-text styles */
 .typing-text {
     font-size: 34px;
     font-weight: 600;
@@ -213,14 +213,16 @@ span {
     animation: words 20s infinite;
 }
 
+/* Update cursor animation styles */
 .typing-text span::after {
     content: "";
     background-color: black;
     position: absolute;
-    width: calc(100% + 8px);
+    width: 2px;
     height: 100%;
-    border-left: 3px solid black;
+    border-left: 2px solid #b74b4b;
     animation: cursor 0.6s infinite;
+    right: -4px;
 }
 
 @keyframes cursor {
@@ -371,15 +373,6 @@ span {
     font-weight: 600;
 }
 
-/* Remove or comment out the old #education-item .date styling */
-/* #education-item .date {
-    position: absolute;
-    top: 1rem;
-    right: 2rem;
-    font-size: 1.4rem;
-    color: #888;
-} */
-
 #footer {
     background-color: #161616;
     color: white;
@@ -447,5 +440,111 @@ span {
     margin-top: 2rem;
     font-size: 1.4rem;
     color: #888;
+}
+
+@media (max-width: 995px) { 
+    header {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+    
+    nav a {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 1rem 0;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Add these styles for the menu button */
+.menu-btn {
+    font-size: 2.6rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Update media query for mobile devices */
+@media (max-width: 995px) {
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 4%;
+        background: #161616;
+        border-top: 2px solid #b74b4b;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        transition: 0.3s ease;
+    }
+
+    nav.active {
+        top: 7rem;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        text-align: center;
+    }
+
+    .typing-text {
+        font-size: 24px;
+        min-width: 200px;
+    }
+
+    .typing-text span::after {
+        width: 1px;
+        border-left: 1px solid #b74b4b;
+        right: -2px;
+    }
+    
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .typing-text {
+        font-size: 20px;
+        min-width: 160px;
+    }
 }
 

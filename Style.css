@@ -295,6 +295,10 @@ span {
     max-width: 800px;
     margin: 0 auto;
 }
+#date {
+    color: #b74b4b;
+    font-size: 2.6rem;
+}
 
 .education-timeline::before {
     content: '';
@@ -354,10 +358,91 @@ span {
     margin-top: 0.5rem;
 }
 
+/* Update the date class styling */
 .education-item .date {
+    position: relative;
+    top: 1rem;
+    right: 0.05rem;
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Remove or comment out the old #education-item .date styling */
+/* #education-item .date {
     position: absolute;
     top: 1rem;
     right: 2rem;
     font-size: 1.4rem;
     color: #888;
+} */
+
+#footer {
+    background-color: #161616;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-top: 5rem;
 }
+
+.footer-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer-content span {
+    color: #b74b4b;
+}
+
+.footer-info p {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+
+.footer-info i {
+    color: #b74b4b;
+    margin-right: 0.8rem;
+}
+
+.footer-info a {
+    color: #b74b4b;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: transparent;
+    border: 2px solid #b74b4b;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    color: #b74b4b;
+}
+
+.footer-social a:hover {
+    background-color: #b74b4b;
+    color: black;
+    transform: scale(1.1);
+}
+
+.footer-copy {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: #888;
+}
+

@@ -4,9 +4,9 @@ Welcome to my portfolio! I'm a Computer Science undergraduate passionate about s
 
 ## 🛠️ Skills
 - **Languages:** Java, Python, C++, JavaScript, TypeScript
-- **Web Tech:** React, Node.js, Express.js
-- **Databases:** MySQL, MongoDB, PostgreSQL
-- **Tools:** Git, Docker, AWS, Postman
+- **Web Tech:** React, Node.js
+- **Databases:** MySQL, MongoDB
+- **Tools:** Git, Docker, Postman
 
 ## 🔗 Connect with Me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kavindu-anjana-02477a253/)

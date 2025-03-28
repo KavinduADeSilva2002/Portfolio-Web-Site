@@ -281,7 +281,7 @@ span {
     50% { content: "Web Desi"; }
     51% { content: "Web Desig"; }
     52% { content: "Web Design"; }
-    53%{ content: "Web Designe"; }
+    53% { content: "Web Designe"; }
     54%,56%{ content: "Web Designer"; }
     57% { content: " "; }
 
@@ -547,11 +547,21 @@ span {
 }
 
 #footer {
-    background-color: #161616;
+    background-color: black; /* Changed from #161616 to black */
     color: white;
     text-align: center;
-    padding: 4rem 2rem;
-    margin-top: 5rem;
+    padding: 6rem 2rem; /* Increased top/bottom padding from 4rem to 6rem */
+    margin-top: 0; /* Remove top margin since sections have padding */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-info {
+    margin: 4rem 0; /* Add more space between sections */
 }
 
 .footer-content h2 {
@@ -659,6 +669,14 @@ span {
         align-items: center;
         text-align: center;
     }
+
+    #footer {
+        padding: 4rem 2rem;
+    }
+
+    .footer-info {
+        margin: 3rem 0;
+    }
 }
 
 @media (max-width: 600px) {
@@ -681,6 +699,14 @@ span {
         width: 4rem;
         height: 4rem;
         font-size: 2rem;
+    }
+
+    #footer {
+        padding: 3rem 1.5rem;
+    }
+
+    .footer-info {
+        margin: 2rem 0;
     }
 }
 

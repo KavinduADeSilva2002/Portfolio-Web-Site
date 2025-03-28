@@ -202,7 +202,9 @@ span {
     font-weight: 600;
     min-width: 280px;
     line-height: 1.2;
-    position: relative; /* Add this */
+    position: relative;
+    display: flex;
+    gap: 10px;
 }
 
 .typing-text span {
@@ -754,6 +756,17 @@ span {
     .typing-text {
         font-size: 24px;
         min-width: 200px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .home-content h3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
     }
 
     .typing-text span::after {

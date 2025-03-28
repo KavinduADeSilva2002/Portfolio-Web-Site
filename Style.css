@@ -232,84 +232,93 @@ span {
     /* Full Stack Developer */
      0% { content: ""; }
     2% { content: "F"; }
-    4% { content: "Fu"; }
-    6% { content: "Full"; }
-    8% { content: "Full S"; }
-    10% { content: "Full Sta"; }
-    12% { content: "Full Stack "; }
-    14% { content: "Full Stack Dev"; }
+    3% { content: "Fu"; }
+    4% { content: "Ful"; }
+    5% { content: "Full "; }
+    6% { content: "Full S"; }
+    7% { content: "Full St "; }
+    8% { content: "Full Sta"; }
+    9% { content: "Full Stac"; }
+    10% { content: "Full Stack "; }
+    11% { content: "Full Stack D "; }
+    12% { content: "Full Stack De"; }
+    13% { content: "Full Stack Dev"; }
+    14% { content: "Full Stack Deve"; }
+    15%{ content: "Full Stack Devel"; }
     16% { content: "Full Stack Develo"; }
-    18%,20% { content: "Full Stack Developer"; }
-    22% { content: "Full Stack Develop "; }
-    24% { content: "Full Stack Dev"; }
-    26% { content: "Full Stack"; }
-    28% { content: "Full St"; }
-    30%{ content: "Full"; }
-    32% { content: "Fu"; }
-    34% { content: ""; }
-    
-    36% { content: "We"; }
-    37% { content: "Web "; }
-    38% { content: "Web De"; }
-    39% { content: "Web Deve"; }
-    40% { content: "Web Develo"; }
-    41%,43% { content: "Web Developer"; }
-    44% { content: "Web Develope"; }
-    45% { content: "Web Develo"; }
-    46% { content: "Web Deve"; }
-    47% { content: "Web D"; }
-    48% { content: "Web"; }
-    49% { content: "We"; }
-    50% { content: ""; }
+    17% { content: "Full Stack Develop"; }
+    18% { content: "Full Stack Develope"; }
+    19%,21%{ content: "Full Stack Developer"; }
+    22% { content: " "; }
 
     
-    51% { content: "W"; }
-    52% { content: "We"; }
-    53% { content: "Web"; }
-    54% { content: "Web "; }
-    55% { content: "Web D"; }
-    56% { content: "Web De"; }
-    57% { content: "Web Des"; }
-    58% { content: "Web Desig"; }
-    59% { content: "Web Design"; }
-    60%, 62% { content: "Web Designer"; }
-    63% { content: "Web Designe"; }
-    64% { content: "Web Design"; }
-    65% { content: "Web Desig"; }
-    66% { content: "Web Des"; }
-    67% { content: "Web De"; }
-    68% { content: "Web D"; }
-    69% { content: "Web"; }
-    70% { content: "We"; }
-    71% { content: ""; }
+    23% { content: "W"; }
+    24% { content: "We"; }
+    25% { content: "Web"; }
+    26% { content: "Web "; }
+    27% { content: "Web D"; }
+    28% { content: "Web De"; }
+    29% { content: "Web Dev"; }
+    30% { content: "Web Deve"; }
+    31% { content: "Web Devel"; }
+    32% { content: "Web Develo"; }
+    33% { content: "Web Develop"; }
+    38% { content: "Web Develope"; }
+    39%,41% { content: "Web Developer"; }
+    42% { content: " "; }
     
-    72% { content: "M"; }
-    73% { content: "Mo"; }
-    74% { content: "Mobile"; }
-    75% { content: "Mobile A"; }
-    76% { content: "Mobile App "; }
-    77% { content: "Mobile App D"; }
-    78% { content: "Mobile App Dev"; }
-    79% { content: "Mobile App Develo"; }
-    80%, 82% { content: "Mobile App Developer"; }
-    83% { content: "Mobile App Develo"; }
-    84% { content: "Mobile App De"; }
-    85% { content: "Mobile App"; }
-    86% { content: "Mobile A"; }
-    87% { content: "Mobile"; }
-    88% { content: "Mob"; }
-    89% { content: "M"; }
-    90% { content: ""; }
+    43% { content: "W"; }
+    44% { content: "We"; }
+    45% { content: "Web"; }
+    46% { content: "Web "; }
+    47% { content: "Web D"; }
+    48% { content: "Web De"; }
+    49% { content: "Web Des"; }
+    50% { content: "Web Desi"; }
+    51% { content: "Web Desig"; }
+    52% { content: "Web Design"; }
+    53%{ content: "Web Designe"; }
+    54%,56%{ content: "Web Designer"; }
+    57% { content: " "; }
+
+    58% { content: "M"; }
+    59% { content: "Mo"; }
+    60% { content: "Mob"; }
+    61% { content: "Mobi"; }
+    62% { content: "Mobil"; }
+    63% { content: "Mobile"; }
+    64% { content: "Mobile "; }
+    65% { content: "Mobile A"; }
+    66% { content: "Mobile Ap"; }
+    67% { content: "Mobile App"; }
+    68% { content: "Mobile App "; }
+    69% { content: "Mobile App D"; }
+    70% { content: "Mobile App De"; }
+    71% { content: "Mobile App Dev"; }
+    72% { content: "Mobile App Deve"; }
+    73% { content: "Mobile App Devel"; }
+    74% { content: "Mobile App Develo"; }
+    75% { content: "Mobile App Develop"; }
+    76% { content: "Mobile App Develope"; }
+    77%,79% { content: "Mobile App Developer"; }
+    80% { content: " "; }
     
-    91% { content: "U"; }
-    92% { content: "UI"; }
-    93% { content: "UI/"; }
-    94% { content: "UI/U"; }
-    95% { content: "UI/UX"; }
-    96% { content: "UI/UX "; }
-    97% { content: "UI/UX D"; }
-    98% { content: "UI/UX De"; }
-    99%, 100% { content: "UI/UX Designer"; }
+    81% { content: "U"; }
+    82% { content: "UI"; }
+    83% { content: "UI/"; }
+    84% { content: "UI/U"; }
+    85% { content: "UI/UX"; }
+    86% { content: "UI/UX "; }
+    87% { content: "UI/UX D"; }
+    88% { content: "UI/UX De"; }
+    89% { content: "UI/UX Des"; }
+    90% { content: "UI/UX Desi"; }
+    91% { content: "UI/UX Desig"; }
+    92% { content: "UI/UX Design"; }
+    93% { content: "UI/UX Designe"; }
+    94%,96% { content: "UI/UX Designer"; }
+    97% { content: " "; }
+    
 }
 
 /* Skills Section Styles */
@@ -444,6 +453,93 @@ span {
     font-size: 1.8rem;
     color: #ffffff;
     font-weight: 600;
+}
+
+/* Projects Section Styles */
+.projects {
+    background-color: #161616;
+}
+
+.projects-content h2 {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 5rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    padding: 0 2rem;
+}
+
+.project-item {
+    background-color: #222;
+    padding: 3rem;
+    border-radius: 2rem;
+    text-align: center;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    border-color: #b74b4b;
+    box-shadow: 0 0 20px rgba(183, 75, 75, 0.3);
+}
+
+.project-item i {
+    font-size: 5rem;
+    color: #b74b4b;
+    margin-bottom: 2rem;
+}
+
+.project-item h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.project-item p {
+    font-size: 1.6rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.project-tech span {
+    background-color: #b74b4b;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+}
+
+/* Add responsive styles for projects */
+@media (max-width: 995px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .project-item {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-item h3 {
+        font-size: 2rem;
+    }
+    
+    .project-item p {
+        font-size: 1.4rem;
+    }
 }
 
 #footer {

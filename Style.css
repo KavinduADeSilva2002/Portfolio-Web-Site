@@ -201,11 +201,13 @@ span {
     font-size: 34px;
     font-weight: 600;
     min-width: 280px;
-    line-height: 1.2; /* Add line height for consistent spacing */
+    line-height: 1.2;
+    position: relative; /* Add this */
 }
 
 .typing-text span {
     position: relative;
+    display: inline-block;
 }
 
 .typing-text span::before {
@@ -218,12 +220,12 @@ span {
 .typing-text span::after {
     content: "";
     position: absolute;
+    top: 0;
     right: -4px;
     width: 2px;
-    height: 1.2em; /* Change to em units for relative sizing */
+    height: 100%; /* Change to percentage */
     border-left: 2px solid #b74b4b;
     animation: cursor 0.6s infinite;
-    top: 0; /* Add top positioning */
 }
 
 @keyframes cursor {
@@ -729,7 +731,7 @@ span {
     }
 
     .typing-text span::after {
-        height: 1.2em; /* Keep consistent height ratio */
+        height: 100%;
         width: 1px;
         border-left: 1px solid #b74b4b;
         right: -2px;

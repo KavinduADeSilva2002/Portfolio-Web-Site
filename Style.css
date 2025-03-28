@@ -66,6 +66,21 @@ nav a.active {
     border-bottom: 3px solid #b74b4b;
 }
 
+/* Add this after your nav a styles */
+.download-cv {
+    color: #b74b4b !important;
+    border: 2px solid #b74b4b;
+    padding: 0.8rem 1.5rem !important;
+    border-radius: 2rem;
+    transition: 0.3s ease;
+}
+
+.download-cv:hover {
+    background-color: #b74b4b;
+    color: #fff !important;
+    border-color: #b74b4b;
+}
+
 @media (max-width:995px){ 
     nav {
         position: absolute;
@@ -763,6 +778,15 @@ span {
 
     .menu-btn.fa-times {
         display: none; /* Remove the times icon */
+    }
+
+    .download-cv {
+        margin: 2rem 0;
+        padding: 1rem 2rem !important;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
 }
 

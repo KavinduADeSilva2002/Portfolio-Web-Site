@@ -813,3 +813,68 @@ span {
     }
 }
 
+/* Add these animation keyframes */
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add these classes for animations */
+.skills, .education, .projects {
+    opacity: 0;
+}
+
+.skills.animate {
+    animation: slideFromLeft 1s ease forwards;
+}
+
+.education.animate {
+    animation: slideFromRight 1s ease forwards;
+}
+
+.projects.animate {
+    animation: slideFromBottom 1s ease forwards;
+}
+
+/* Add individual item animations */
+.skill-item, .education-item, .project-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.skill-item.animate, 
+.education-item.animate, 
+.project-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+

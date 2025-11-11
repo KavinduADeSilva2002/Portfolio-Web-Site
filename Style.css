@@ -1,3 +1,4 @@
+/* Style.css */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 * {
@@ -22,7 +23,7 @@ body {
     color: white;
 }
 
-/* Header Styles (Kept the same as your original) */
+/* Header Styles */
 header {
     margin-top: 0px;
     position: fixed;
@@ -30,11 +31,18 @@ header {
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background-color: 	#353839;
+    background-color: #353839;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;   
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(53, 56, 57, 0.9);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 9%;
 }
 
 .logo {
@@ -58,12 +66,28 @@ nav a {
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
     padding-bottom: 0.5rem;
+    position: relative;
+}
+
+nav a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -3px;
+    left: 0;
+    background-color: #b74b4b;
+    transition: width 0.3s ease;
+}
+
+nav a:hover:after,
+nav a.active:after {
+    width: 100%;
 }
 
 nav a:hover,
 nav a.active {
     color: #b74b4b;
-    border-bottom: 3px solid #b74b4b;
 }
 
 @media (max-width:995px){ 
@@ -77,10 +101,16 @@ nav a.active {
         border-bottom-left-radius: 2rem;
         padding: 1rem solid;
         background-color: #161616;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
     }
     
     nav.active {
-        display: block;
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
     }
     
     nav a {
@@ -102,13 +132,31 @@ section {
     padding: 10rem 9% 5rem;
 }
 
-/* Home Section Styles (Kept the same as your original) */
+/* Home Section Styles */
 .home {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8rem;
     background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.home:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(183, 75, 75, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+    animation: pulse 8s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.8; }
 }
 
 .home-content h1 {
@@ -133,6 +181,25 @@ span {
 
 .home-img {
     border-radius: 50%;
+    position: relative;
+}
+
+.home-img:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #b74b4b, #ff6b6b, #b74b4b);
+    z-index: -1;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .home-img img {
@@ -167,6 +234,23 @@ span {
     border-radius: 50%;
     transition: 0.3s ease;
     color: #b74b4b;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icons a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.social-icons a:hover:before {
+    left: 100%;
 }
 
 .social-icons a:hover {
@@ -188,6 +272,25 @@ span {
     border: 2px solid #b74b4b;
     transition: 0.3s ease;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #b74b4b;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.btn:hover:before {
+    width: 100%;
 }
 
 .btn:hover {
@@ -330,6 +433,24 @@ span {
 /* Skills Section Styles */
 .skills {
     background-color: #161616;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(183, 75, 75, 0.05) 0%, transparent 50%, rgba(183, 75, 75, 0.05) 100%);
+    z-index: 0;
+}
+
+.skills-content {
+    position: relative;
+    z-index: 1;
 }
 
 .skills-content h2 {
@@ -350,6 +471,23 @@ span {
     border-radius: 2rem;
     text-align: center;
     transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transition: 0.5s;
+}
+
+.skill-item:hover:before {
+    left: 100%;
 }
 
 .skill-item:hover {
@@ -361,6 +499,11 @@ span {
     font-size: 5rem;
     color: #b74b4b;
     margin-bottom: 2rem;
+    transition: 0.3s ease;
+}
+
+.skill-item:hover i {
+    transform: scale(1.2);
 }
 
 .skill-item h3 {
@@ -375,6 +518,24 @@ span {
 /* Education Section Styles */
 .education {
     background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.education:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 50%, rgba(183, 75, 75, 0.05) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.education-content {
+    position: relative;
+    z-index: 1;
 }
 
 .education-content h2 {
@@ -388,6 +549,7 @@ span {
     max-width: 800px;
     margin: 0 auto;
 }
+
 #date {
     color: #b74b4b;
     font-size: 2.6rem;
@@ -411,6 +573,12 @@ span {
     background-color: #161616;
     margin-bottom: 3rem;
     border-radius: 1rem;
+    transition: 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(183, 75, 75, 0.2);
 }
 
 .education-item:nth-child(even) {
@@ -426,6 +594,12 @@ span {
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
+    transition: 0.3s ease;
+}
+
+.education-item:hover::before {
+    transform: translateY(-50%) scale(1.2);
+    box-shadow: 0 0 10px #b74b4b;
 }
 
 .education-item:nth-child(odd)::before {
@@ -464,6 +638,24 @@ span {
 /* Projects Section Styles */
 .projects {
     background-color: #161616;
+    position: relative;
+    overflow: hidden;
+}
+
+.projects:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(183, 75, 75, 0.05) 0%, transparent 50%, rgba(183, 75, 75, 0.05) 100%);
+    z-index: 0;
+}
+
+.projects-content {
+    position: relative;
+    z-index: 1;
 }
 
 .projects-content h2 {
@@ -486,18 +678,40 @@ span {
     text-align: center;
     transition: 0.3s ease;
     border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transition: 0.5s;
+}
+
+.project-item:hover:before {
+    left: 100%;
 }
 
 .project-item:hover {
     transform: translateY(-10px);
     border-color: #b74b4b;
-    box-shadow: 0 0 20px rgba(183, 75, 75, 0.3);
+    box-shadow: 0 10px 20px rgba(183, 75, 75, 0.3);
 }
 
 .project-item i {
     font-size: 5rem;
     color: #b74b4b;
     margin-bottom: 2rem;
+    transition: 0.3s ease;
+}
+
+.project-item:hover i {
+    transform: scale(1.2);
 }
 
 .project-item h3 {
@@ -517,6 +731,7 @@ span {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+    margin-bottom: 2rem;
 }
 
 .project-tech span {
@@ -525,6 +740,42 @@ span {
     padding: 0.5rem 1.5rem;
     border-radius: 2rem;
     font-size: 1.4rem;
+    transition: 0.3s ease;
+}
+
+.project-tech span:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(183, 75, 75, 0.3);
+}
+
+.project-features {
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.project-features h4 {
+    font-size: 1.8rem;
+    color: #b74b4b;
+    margin-bottom: 1rem;
+}
+
+.project-features ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.project-features li {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.project-features li:before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: #b74b4b;
 }
 
 /* Add responsive styles for projects */
@@ -549,21 +800,36 @@ span {
 }
 
 #footer {
-    background-color: black; /* Changed from #161616 to black */
+    background-color: black;
     color: white;
     text-align: center;
-    padding: 6rem 2rem; /* Increased top/bottom padding from 4rem to 6rem */
-    margin-top: 0; /* Remove top margin since sections have padding */
+    padding: 6rem 2rem;
+    margin-top: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#footer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(183, 75, 75, 0.05) 0%, transparent 50%);
+    z-index: 0;
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 .footer-info {
-    margin: 4rem 0; /* Add more space between sections */
+    margin: 4rem 0;
 }
 
 .footer-content h2 {
@@ -588,10 +854,12 @@ span {
 .footer-info a {
     color: #b74b4b;
     text-decoration: none;
+    transition: 0.3s ease;
 }
 
 .footer-info a:hover {
     text-decoration: underline;
+    color: #ff6b6b;
 }
 
 .footer-social {
@@ -613,6 +881,23 @@ span {
     border-radius: 50%;
     transition: 0.3s ease;
     color: #b74b4b;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-social a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.footer-social a:hover:before {
+    left: 100%;
 }
 
 .footer-social a:hover {
@@ -722,6 +1007,12 @@ span {
     right: 2rem;
     top: 50%;
     transform: translateY(-50%);
+    transition: 0.3s ease;
+    z-index: 101;
+}
+
+.menu-btn:hover {
+    color: #b74b4b;
 }
 
 /* Update media query for mobile devices */
@@ -740,6 +1031,7 @@ span {
         border-top: 2px solid #b74b4b;
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
         transition: 0.3s ease;
+        z-index: 99;
     }
 
     nav.active {
@@ -791,8 +1083,8 @@ span {
     }
 
     .home-img img {
-        width: 70vw; /* Increase image size */
-        max-width: 300px; /* Add maximum width */
+        width: 70vw;
+        max-width: 300px;
     }
 
     .menu-btn i {
@@ -801,7 +1093,7 @@ span {
     }
 
     .menu-btn.fa-times {
-        display: none; /* Remove the times icon */
+        display: none;
     }
 }
 
@@ -809,72 +1101,73 @@ span {
     .typing-text {
         font-size: 20px;
         min-width: 160px;
-        line-height: 1.3; /* Slightly increase line height for better readability */
+        line-height: 1.3;
+    }
+    
+    .education-timeline::before {
+        left: 20px;
+    }
+    
+    .education-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 25px;
+    }
+    
+    .education-item:nth-child(even) {
+        margin-left: 0;
+    }
+    
+    .education-item::before {
+        left: 10px !important;
+        right: auto !important;
     }
 }
 
-/* Add these animation keyframes */
-@keyframes slideFromLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
 }
 
-@keyframes slideFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.float {
+    animation: float 5s ease-in-out infinite;
 }
 
-@keyframes slideFromBottom {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Particle background */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 
-/* Add these classes for animations */
-.skills, .education, .projects {
-    opacity: 0;
+.particle {
+    position: absolute;
+    background-color: rgba(183, 75, 75, 0.3);
+    border-radius: 50%;
+    animation: float 10s infinite linear;
 }
 
-.skills.animate {
-    animation: slideFromLeft 1s ease forwards;
+/* Scroll progress bar */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(to right, #b74b4b, #ff6b6b);
+    z-index: 1000;
+    transition: width 0.3s ease;
 }
 
-.education.animate {
-    animation: slideFromRight 1s ease forwards;
+/* Add scroll effect to header */
+header.scrolled {
+    background-color: rgba(53, 56, 57, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 9%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
-
-.projects.animate {
-    animation: slideFromBottom 1s ease forwards;
-}
-
-/* Add individual item animations */
-.skill-item, .education-item, .project-item {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s ease;
-}
-
-.skill-item.animate, 
-.education-item.animate, 
-.project-item.animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-

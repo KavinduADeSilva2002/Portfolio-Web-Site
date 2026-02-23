@@ -797,7 +797,7 @@ ul {
     gap: 2.5rem 5rem;
 }
 
-.bar-group {}
+
 
 .bar-label {
     display: flex;
@@ -1500,9 +1500,83 @@ ul {
 }
 
 /* ══════════════════════════════════════════════
-   RESPONSIVE — Tablet
+   ANIMATE-ON-SCROLL  (works on ALL screen sizes)
+   JS adds .visible when element enters viewport
 ══════════════════════════════════════════════ */
-@media (max-width:1100px) {
+.skill-cat-card,
+.proj-card,
+.edu-card,
+.exp-card {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+        opacity .6s cubic-bezier(.4, 0, .2, 1),
+        transform .6s cubic-bezier(.4, 0, .2, 1),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.skill-cat-card.visible,
+.proj-card.visible,
+.edu-card.visible,
+.exp-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delay via data-delay applied by JS */
+.skill-cat-card:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.skill-cat-card:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.skill-cat-card:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.edu-card:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.edu-card:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.edu-card:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.proj-card:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.proj-card:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.proj-card:nth-child(4) {
+    transition-delay: 0.15s;
+}
+
+.proj-card:nth-child(5) {
+    transition-delay: 0.25s;
+}
+
+.proj-card:nth-child(6) {
+    transition-delay: 0.35s;
+}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE — Tablet (≤ 1100px)
+══════════════════════════════════════════════ */
+@media (max-width: 1100px) {
+    .nav-container {
+        padding: 2rem 3rem;
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
         gap: 5rem;
@@ -1510,11 +1584,16 @@ ul {
     }
 
     .hero-desc {
-        margin: 0 auto 3.5rem;
+        margin: 0 auto 2.5rem;
+        max-width: 100%;
     }
 
     .hero-cta,
     .hero-socials {
+        justify-content: center;
+    }
+
+    .hero-role {
         justify-content: center;
     }
 
@@ -1528,18 +1607,18 @@ ul {
     }
 
     .stat-card-1 {
-        left: -30px;
-        top: 8%;
+        left: -24px;
+        top: 10%;
     }
 
     .stat-card-2 {
-        right: -20px;
-        bottom: 18%;
+        right: -12px;
+        bottom: 16%;
     }
 
     .stat-card-3 {
-        left: -20px;
-        bottom: 2%;
+        left: -14px;
+        bottom: 4%;
     }
 
     .projects-grid {
@@ -1555,35 +1634,41 @@ ul {
     }
 }
 
-@media (max-width:768px) {
+/* ══════════════════════════════════════════════
+   RESPONSIVE — Mobile (≤ 768px)
+══════════════════════════════════════════════ */
+@media (max-width: 768px) {
     html {
         font-size: 55%;
     }
 
+    /* ─── NAV ─── */
     .nav-container {
-        padding: 1.8rem 2.5rem;
+        padding: 1.8rem 2.4rem;
     }
 
     .menu-btn {
         display: flex;
     }
 
+    /* Slide-in drawer */
     #navbar {
         position: fixed;
         top: 0;
         right: -100%;
         height: 100vh;
-        width: 72%;
-        max-width: 320px;
+        width: 76%;
+        max-width: 300px;
         background: #fff;
         border-left: 1px solid var(--card-border);
+        box-shadow: -8px 0 50px rgba(0, 0, 0, .12);
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        transition: right .4s cubic-bezier(.4, 0, .2, 1);
+        align-items: flex-start;
+        gap: .5rem;
+        padding: 0 3rem;
         z-index: 100;
-        box-shadow: -10px 0 40px rgba(0, 0, 0, .08);
+        transition: right .4s cubic-bezier(.4, 0, .2, 1);
     }
 
     #navbar.open {
@@ -1592,36 +1677,83 @@ ul {
 
     .nav-link {
         font-size: 2.2rem;
-        padding: 1.3rem 2.5rem;
+        padding: 1.4rem 2rem;
+        width: 100%;
+        border-radius: var(--radius-sm);
     }
 
+    /* ─── SECTIONS ─── */
     .section {
         padding: 9rem 0 5rem;
     }
 
     .section-container {
-        padding: 0 2.5rem;
+        padding: 0 2.2rem;
     }
 
     .section-title {
         font-size: 3.8rem;
     }
 
+    .section-subtitle {
+        font-size: 1.65rem;
+    }
+
+    .section-header {
+        margin-bottom: 4.5rem;
+    }
+
+    /* ─── HERO ─── */
     .hero {
-        padding: 10rem 2.5rem 5rem;
+        padding: 10rem 2.2rem 6rem;
+        min-height: auto;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+        text-align: center;
+    }
+
+    .hero-visual {
+        order: -1;
+        margin-bottom: 3.5rem;
+    }
+
+    .hero-desc {
+        margin: 0 auto 2.5rem;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .hero-socials {
+        justify-content: center;
+    }
+
+    .hero-role {
+        justify-content: center;
     }
 
     .name-highlight {
-        font-size: 4.4rem;
+        font-size: 4.2rem;
+    }
+
+    /* Photo — smaller, centered */
+    .hero-photo-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
     }
 
     .hero-photo {
-        width: 280px;
-        height: 340px;
-    }
-
-    .stat-card {
-        display: none;
+        width: 230px;
+        height: 280px;
+        border-radius: 20px;
+        margin: 0 auto;
+        display: block;
     }
 
     .photo-decor-1,
@@ -1629,17 +1761,54 @@ ul {
         display: none;
     }
 
-    .projects-grid {
+    /* Stat cards — move out of absolute, show in a row BELOW the photo */
+    .stat-card {
+        position: static !important;
+        animation: float-card 4s ease-in-out infinite;
+        flex-shrink: 0;
+    }
+
+    /* Mobile row wrapper injected by JS */
+    .mobile-stat-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .stat-card strong {
+        font-size: 1.35rem;
+    }
+
+    .stat-card span {
+        font-size: 1.15rem;
+    }
+
+    .stat-card i {
+        width: 3.2rem;
+        height: 3.2rem;
+        font-size: 1.7rem;
+    }
+
+    /* ─── SKILLS ─── */
+    .skills-top-grid {
         grid-template-columns: 1fr;
     }
 
-    .proj-featured {
-        grid-column: span 1;
+    .skills-bars-grid {
+        grid-template-columns: 1fr;
     }
 
+    .skills-bars-section {
+        padding: 3rem 2.5rem;
+    }
+
+    /* ─── EXPERIENCE ─── */
     .exp-card {
         flex-direction: column;
         gap: 2rem;
+        padding: 3rem 2.5rem;
     }
 
     .exp-left {
@@ -1649,38 +1818,121 @@ ul {
 
     .exp-vline {
         width: auto;
-        height: 2px;
         flex: 1;
+        height: 2px;
         margin: 0 0 0 1rem;
+        background: linear-gradient(90deg, rgba(108, 99, 255, .3), transparent);
     }
 
-    .skills-bars-grid {
+    .exp-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .exp-date {
+        align-self: flex-start;
+    }
+
+    /* ─── PROJECTS ─── */
+    .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .proj-featured {
+        grid-column: span 1;
+    }
+
+    /* ─── EDUCATION ─── */
+    .edu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ─── CONTACT ─── */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .cta-box {
+        padding: 3.5rem 2.5rem;
+    }
+
+    /* Hide scroll cue on mobile */
+    .scroll-cue {
+        display: none;
     }
 }
 
-@media (max-width:480px) {
+/* ══════════════════════════════════════════════
+   RESPONSIVE — Small Mobile (≤ 480px)
+══════════════════════════════════════════════ */
+@media (max-width: 480px) {
     html {
         font-size: 50%;
     }
 
-    .hero-cta {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .btn-primary,
-    .btn-outline {
-        width: 100%;
-        justify-content: center;
+    .section-container {
+        padding: 0 1.8rem;
     }
 
     .section-title {
         font-size: 3.2rem;
     }
 
-    .exp-header {
+    .section-header {
+        margin-bottom: 4rem;
+    }
+
+    .hero {
+        padding: 9rem 1.8rem 5rem;
+    }
+
+    .name-highlight {
+        font-size: 3.8rem;
+    }
+
+    .hero-photo {
+        width: 200px;
+        height: 250px;
+    }
+
+    .hero-desc {
+        font-size: 1.6rem;
+    }
+
+    .hero-cta {
         flex-direction: column;
+        width: 100%;
+        gap: 1.2rem;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
+        justify-content: center;
+        font-size: 1.6rem;
+        padding: 1.5rem 2rem;
+    }
+
+    /* Compact cards on very small screens */
+    .skill-cat-card {
+        padding: 2.5rem 2rem;
+    }
+
+    .exp-card {
+        padding: 2.5rem 1.8rem;
+    }
+
+    .proj-card {
+        padding: 2.5rem 2rem;
+    }
+
+    .edu-card {
+        padding: 2.5rem 2rem;
+    }
+
+    .contact-card {
+        padding: 2.5rem 2rem;
     }
 
     .cta-box {
@@ -1688,10 +1940,26 @@ ul {
     }
 
     .skills-bars-section {
-        padding: 2.5rem 2rem;
+        padding: 2.5rem 1.8rem;
     }
 
-    .stats-card {
-        display: none;
+    .bars-title {
+        font-size: 2rem;
+    }
+
+    .exp-desc {
+        font-size: 1.55rem;
+    }
+
+    .hl-item {
+        font-size: 1.4rem;
+    }
+
+    .section-tag {
+        font-size: 1.2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.55rem;
     }
 }

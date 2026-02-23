@@ -90,7 +90,7 @@ nav a.active {
     color: #b74b4b;
 }
 
-@media (max-width:995px){ 
+@media (max-width:995px) {
     nav {
         position: absolute;
         top: 100%;
@@ -106,19 +106,19 @@ nav a.active {
         visibility: hidden;
         transition: all 0.3s ease;
     }
-    
+
     nav.active {
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
     }
-    
+
     nav a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
     }
-    
+
     nav a:hover,
     nav a:active {
         padding: 1rem;
@@ -155,8 +155,17 @@ section {
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.1); opacity: 0.8; }
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
 }
 
 .home-content h1 {
@@ -198,8 +207,13 @@ span {
 }
 
 @keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .home-img img {
@@ -328,106 +342,359 @@ span {
     top: 0;
     right: -4px;
     width: 2px;
-    height: 100%; /* Change to percentage */
+    height: 100%;
+    /* Change to percentage */
     border-left: 2px solid #b74b4b;
     animation: cursor 0.6s infinite;
 }
 
 @keyframes cursor {
-    50% { border-color: transparent; }
+    50% {
+        border-color: transparent;
+    }
 }
 
 @keyframes typing {
+
     /* Full Stack Developer */
-     0% { content: ""; }
-    2% { content: "F"; }
-    3% { content: "Fu"; }
-    4% { content: "Ful"; }
-    5% { content: "Full "; }
-    6% { content: "Full S"; }
-    7% { content: "Full St "; }
-    8% { content: "Full Sta"; }
-    9% { content: "Full Stac"; }
-    10% { content: "Full Stack "; }
-    11% { content: "Full Stack D "; }
-    12% { content: "Full Stack De"; }
-    13% { content: "Full Stack Dev"; }
-    14% { content: "Full Stack Deve"; }
-    15%{ content: "Full Stack Devel"; }
-    16% { content: "Full Stack Develo"; }
-    17% { content: "Full Stack Develop"; }
-    18% { content: "Full Stack Develope"; }
-    19%,21%{ content: "Full Stack Developer"; }
-    22% { content: " "; }
+    0% {
+        content: "";
+    }
 
-    
-    23% { content: "W"; }
-    24% { content: "We"; }
-    25% { content: "Web"; }
-    26% { content: "Web "; }
-    27% { content: "Web D"; }
-    28% { content: "Web De"; }
-    29% { content: "Web Dev"; }
-    30% { content: "Web Deve"; }
-    31% { content: "Web Devel"; }
-    32% { content: "Web Develo"; }
-    33% { content: "Web Develop"; }
-    38% { content: "Web Develope"; }
-    39%,41% { content: "Web Developer"; }
-    42% { content: " "; }
-    
-    43% { content: "W"; }
-    44% { content: "We"; }
-    45% { content: "Web"; }
-    46% { content: "Web "; }
-    47% { content: "Web D"; }
-    48% { content: "Web De"; }
-    49% { content: "Web Des"; }
-    50% { content: "Web Desi"; }
-    51% { content: "Web Desig"; }
-    52% { content: "Web Design"; }
-    53% { content: "Web Designe"; }
-    54%,56%{ content: "Web Designer"; }
-    57% { content: " "; }
+    2% {
+        content: "F";
+    }
 
-    58% { content: "M"; }
-    59% { content: "Mo"; }
-    60% { content: "Mob"; }
-    61% { content: "Mobi"; }
-    62% { content: "Mobil"; }
-    63% { content: "Mobile"; }
-    64% { content: "Mobile "; }
-    65% { content: "Mobile A"; }
-    66% { content: "Mobile Ap"; }
-    67% { content: "Mobile App"; }
-    68% { content: "Mobile App "; }
-    69% { content: "Mobile App D"; }
-    70% { content: "Mobile App De"; }
-    71% { content: "Mobile App Dev"; }
-    72% { content: "Mobile App Deve"; }
-    73% { content: "Mobile App Devel"; }
-    74% { content: "Mobile App Develo"; }
-    75% { content: "Mobile App Develop"; }
-    76% { content: "Mobile App Develope"; }
-    77%,79% { content: "Mobile App Developer"; }
-    80% { content: " "; }
-    
-    81% { content: "U"; }
-    82% { content: "UI"; }
-    83% { content: "UI/"; }
-    84% { content: "UI/U"; }
-    85% { content: "UI/UX"; }
-    86% { content: "UI/UX "; }
-    87% { content: "UI/UX D"; }
-    88% { content: "UI/UX De"; }
-    89% { content: "UI/UX Des"; }
-    90% { content: "UI/UX Desi"; }
-    91% { content: "UI/UX Desig"; }
-    92% { content: "UI/UX Design"; }
-    93% { content: "UI/UX Designe"; }
-    94%,96% { content: "UI/UX Designer"; }
-    97% { content: " "; }
-    
+    3% {
+        content: "Fu";
+    }
+
+    4% {
+        content: "Ful";
+    }
+
+    5% {
+        content: "Full ";
+    }
+
+    6% {
+        content: "Full S";
+    }
+
+    7% {
+        content: "Full St ";
+    }
+
+    8% {
+        content: "Full Sta";
+    }
+
+    9% {
+        content: "Full Stac";
+    }
+
+    10% {
+        content: "Full Stack ";
+    }
+
+    11% {
+        content: "Full Stack D ";
+    }
+
+    12% {
+        content: "Full Stack De";
+    }
+
+    13% {
+        content: "Full Stack Dev";
+    }
+
+    14% {
+        content: "Full Stack Deve";
+    }
+
+    15% {
+        content: "Full Stack Devel";
+    }
+
+    16% {
+        content: "Full Stack Develo";
+    }
+
+    17% {
+        content: "Full Stack Develop";
+    }
+
+    18% {
+        content: "Full Stack Develope";
+    }
+
+    19%,
+    21% {
+        content: "Full Stack Developer";
+    }
+
+    22% {
+        content: " ";
+    }
+
+
+    23% {
+        content: "W";
+    }
+
+    24% {
+        content: "We";
+    }
+
+    25% {
+        content: "Web";
+    }
+
+    26% {
+        content: "Web ";
+    }
+
+    27% {
+        content: "Web D";
+    }
+
+    28% {
+        content: "Web De";
+    }
+
+    29% {
+        content: "Web Dev";
+    }
+
+    30% {
+        content: "Web Deve";
+    }
+
+    31% {
+        content: "Web Devel";
+    }
+
+    32% {
+        content: "Web Develo";
+    }
+
+    33% {
+        content: "Web Develop";
+    }
+
+    38% {
+        content: "Web Develope";
+    }
+
+    39%,
+    41% {
+        content: "Web Developer";
+    }
+
+    42% {
+        content: " ";
+    }
+
+    43% {
+        content: "W";
+    }
+
+    44% {
+        content: "We";
+    }
+
+    45% {
+        content: "Web";
+    }
+
+    46% {
+        content: "Web ";
+    }
+
+    47% {
+        content: "Web D";
+    }
+
+    48% {
+        content: "Web De";
+    }
+
+    49% {
+        content: "Web Des";
+    }
+
+    50% {
+        content: "Web Desi";
+    }
+
+    51% {
+        content: "Web Desig";
+    }
+
+    52% {
+        content: "Web Design";
+    }
+
+    53% {
+        content: "Web Designe";
+    }
+
+    54%,
+    56% {
+        content: "Web Designer";
+    }
+
+    57% {
+        content: " ";
+    }
+
+    58% {
+        content: "M";
+    }
+
+    59% {
+        content: "Mo";
+    }
+
+    60% {
+        content: "Mob";
+    }
+
+    61% {
+        content: "Mobi";
+    }
+
+    62% {
+        content: "Mobil";
+    }
+
+    63% {
+        content: "Mobile";
+    }
+
+    64% {
+        content: "Mobile ";
+    }
+
+    65% {
+        content: "Mobile A";
+    }
+
+    66% {
+        content: "Mobile Ap";
+    }
+
+    67% {
+        content: "Mobile App";
+    }
+
+    68% {
+        content: "Mobile App ";
+    }
+
+    69% {
+        content: "Mobile App D";
+    }
+
+    70% {
+        content: "Mobile App De";
+    }
+
+    71% {
+        content: "Mobile App Dev";
+    }
+
+    72% {
+        content: "Mobile App Deve";
+    }
+
+    73% {
+        content: "Mobile App Devel";
+    }
+
+    74% {
+        content: "Mobile App Develo";
+    }
+
+    75% {
+        content: "Mobile App Develop";
+    }
+
+    76% {
+        content: "Mobile App Develope";
+    }
+
+    77%,
+    79% {
+        content: "Mobile App Developer";
+    }
+
+    80% {
+        content: " ";
+    }
+
+    81% {
+        content: "U";
+    }
+
+    82% {
+        content: "UI";
+    }
+
+    83% {
+        content: "UI/";
+    }
+
+    84% {
+        content: "UI/U";
+    }
+
+    85% {
+        content: "UI/UX";
+    }
+
+    86% {
+        content: "UI/UX ";
+    }
+
+    87% {
+        content: "UI/UX D";
+    }
+
+    88% {
+        content: "UI/UX De";
+    }
+
+    89% {
+        content: "UI/UX Des";
+    }
+
+    90% {
+        content: "UI/UX Desi";
+    }
+
+    91% {
+        content: "UI/UX Desig";
+    }
+
+    92% {
+        content: "UI/UX Design";
+    }
+
+    93% {
+        content: "UI/UX Designe";
+    }
+
+    94%,
+    96% {
+        content: "UI/UX Designer";
+    }
+
+    97% {
+        content: " ";
+    }
+
 }
 
 /* Skills Section Styles */
@@ -513,6 +780,260 @@ span {
 
 .skill-item p {
     font-size: 1.6rem;
+}
+
+/* Experience Section Styles */
+.experience {
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 50%, rgba(183, 75, 75, 0.07) 0%, transparent 55%);
+    z-index: 0;
+}
+
+.experience-content {
+    position: relative;
+    z-index: 1;
+}
+
+.experience-content h2 {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 5rem;
+}
+
+.experience-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: linear-gradient(to bottom, #b74b4b, #ff6b6b);
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    border-radius: 4px;
+}
+
+.experience-item {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.experience-icon {
+    flex-shrink: 0;
+    width: 6rem;
+    height: 6rem;
+    background: linear-gradient(135deg, #b74b4b, #ff6b6b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    color: white;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(183, 75, 75, 0.5);
+    transition: 0.3s ease;
+}
+
+.experience-item:hover .experience-icon {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(183, 75, 75, 0.7);
+}
+
+.experience-details {
+    background-color: #161616;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    flex: 1;
+    border: 1px solid rgba(183, 75, 75, 0.2);
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-details:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+    transition: 0.5s;
+}
+
+.experience-item:hover .experience-details:before {
+    left: 100%;
+}
+
+.experience-item:hover .experience-details {
+    border-color: #b74b4b;
+    box-shadow: 0 10px 30px rgba(183, 75, 75, 0.2);
+    transform: translateX(5px);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.experience-details h3 {
+    font-size: 2.4rem;
+    color: #b74b4b;
+    font-weight: 700;
+}
+
+.exp-date {
+    font-size: 1.4rem;
+    color: #fff;
+    background: rgba(183, 75, 75, 0.2);
+    border: 1px solid rgba(183, 75, 75, 0.4);
+    padding: 0.4rem 1.2rem;
+    border-radius: 2rem;
+    white-space: nowrap;
+}
+
+.exp-date i {
+    margin-right: 0.5rem;
+    color: #b74b4b;
+}
+
+.experience-details h4 {
+    font-size: 1.9rem;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.experience-details h4 i {
+    color: #b74b4b;
+    margin-right: 0.6rem;
+}
+
+.experience-details>p {
+    font-size: 1.6rem;
+    color: #aaa;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.experience-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.experience-tech span {
+    background-color: rgba(183, 75, 75, 0.15);
+    color: #b74b4b;
+    border: 1px solid rgba(183, 75, 75, 0.4);
+    padding: 0.4rem 1.3rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.experience-tech span:hover {
+    background-color: #b74b4b;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.experience-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.experience-highlights li {
+    font-size: 1.5rem;
+    color: #bbb;
+    padding: 0.5rem 0 0.5rem 2.5rem;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.experience-highlights li:last-child {
+    border-bottom: none;
+}
+
+.experience-highlights li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: #b74b4b;
+    font-size: 1.6rem;
+}
+
+/* Mobile responsive for experience */
+@media (max-width: 600px) {
+    .experience-timeline::before {
+        left: 15px;
+    }
+
+    .experience-item {
+        gap: 1.5rem;
+        padding-left: 0;
+    }
+
+    .experience-icon {
+        width: 4.5rem;
+        height: 4.5rem;
+        font-size: 1.8rem;
+    }
+
+    .experience-header {
+        flex-direction: column;
+    }
+
+    .experience-details h3 {
+        font-size: 2rem;
+    }
+
+    .experience-details h4 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Project ML Badge */
+.project-badge {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.4rem 1.4rem;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+}
+
+.ml-badge {
+    background: linear-gradient(135deg, #6a3de8, #a855f7);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
 }
 
 /* Education Section Styles */
@@ -783,7 +1304,7 @@ span {
     .projects-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-    
+
     .project-item {
         padding: 2rem;
     }
@@ -793,7 +1314,7 @@ span {
     .project-item h3 {
         font-size: 2rem;
     }
-    
+
     .project-item p {
         font-size: 1.4rem;
     }
@@ -912,7 +1433,7 @@ span {
     color: #888;
 }
 
-@media (max-width: 995px) { 
+@media (max-width: 995px) {
     header {
         flex-direction: column;
         padding: 2rem;
@@ -929,7 +1450,7 @@ span {
         flex-wrap: wrap;
         gap: 1.5rem;
     }
-    
+
     nav a {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -1067,7 +1588,7 @@ span {
         border-left: 1px solid #b74b4b;
         right: -2px;
     }
-    
+
     .home-content h1 {
         font-size: 4rem;
     }
@@ -1103,21 +1624,21 @@ span {
         min-width: 160px;
         line-height: 1.3;
     }
-    
+
     .education-timeline::before {
         left: 20px;
     }
-    
+
     .education-item {
         width: 100%;
         padding-left: 50px;
         padding-right: 25px;
     }
-    
+
     .education-item:nth-child(even) {
         margin-left: 0;
     }
-    
+
     .education-item::before {
         left: 10px !important;
         right: auto !important;
@@ -1126,9 +1647,17 @@ span {
 
 /* Floating animation */
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .float {
